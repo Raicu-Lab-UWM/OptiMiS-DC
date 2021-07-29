@@ -1,0 +1,52 @@
+Ana_Path, .\
+Hor_Shift, 0.0163
+Sample_Type, Cells
+Pen_Size, 1
+Separate_Dir, 1
+Inc_Sub_Dir, 1
+Show_Warnings, 0
+Image_Frame_Index, 1
+Polygon_Type, Patch
+Current_Polygon_Index, 1
+Image_Type_Loaded, Tagged Image File Format (tiff)
+curr_Path, .\
+Unmix_Method, Analytic
+Syst_Correct,  
+Use_Fitted_Spect, 0
+Threshold_Method, Donor & Acceptor
+TH_Value, [0 0 1]
+Save_TH_Images, 0
+Flt_Method, X Square
+Flt_LowCut, 1000
+Flt_HighCut, 10000
+Seg_Membrane_Thckness, 10
+Seg_Method, Moving Square
+Seg_Type, Area
+Seg_Split_Value, [30 30]
+Seg_nIterations, 10
+Seg_Intensity_Weight, 1
+Seg_nVert_inPoly, 15
+FICoS_Hist_Bin, 0.001
+FICoS_MetaHist_Bin, 0.02
+FICoS_nGaussians, 1
+FICoS_Fit_Method, Gaussian (Iterative)
+FICoS_Fit_Range, [-1 1]
+FICoS_Method, Peak Pecking
+SEW_Capp, 1
+Capp_minRange, -1
+Capp_maxRange, 1
+Capp_BinSize, 0.02
+Conc_minRange, 0
+Conc_maxRange, 300
+Conc_BinSize, 10
+Pixel_Size, 1
+Pr_MultFact, 1
+Accum_Data, 1
+Flt_Method, X Square
+Flt_LowCut, 1000
+Flt_HighCut, 10000
+Remove_HotPixels, 1
+Analysis_Type, FICoS
+xA_Bin, 0.05
+SlopD, 689
+SlopA, 1534

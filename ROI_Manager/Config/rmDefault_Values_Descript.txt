@@ -1,0 +1,17 @@
+Current Path
+Image frame Index
+include sub-directories
+Image file format
+Polygon Type
+Current Polygon Index
+Membrane Thickness
+Segmentation Method
+Segmentation Type (nSegments or Segment area)
+Segments dimension
+nIterations (SLIC)
+Intensity Weight (SLIC)
+number of vertices for a polygon
+Filtering Method (For FRET)
+Low Intensity Filter (for FRET)
+High Intensity Filter (for FRET)
+Remove Hot Pixels

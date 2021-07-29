@@ -1,0 +1,17 @@
+.\
+1
+0
+Tagged Image File Format (tiff)
+Patch
+1
+10
+Moving Square
+Area
+[23, 23]
+10
+1
+15
+X Square
+1000
+10000
+1
