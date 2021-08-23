@@ -35,6 +35,8 @@ for ii = 1:nSegments_Obj
         Setting_Changed(ii) = Self(ii).nPixels_min_TH ~= 800 || Setting_Changed(ii);
     case 'Curve Guided'
         Det_Membrane_Tick = New_Setting_Struct.Seg_Membrane_Thckness;
+    case 'Curve Guided Shift'
+        Det_Membrane_Tick = New_Setting_Struct.Seg_Membrane_Thckness;
     case 'SLIC'
         Setting_Changed(ii) = Self(ii).nIterations ~= New_Setting_Struct.Seg_nIterations || Setting_Changed(ii);
         Setting_Changed(ii) = Self(ii).Intensity_Variation_Coeff ~= New_Setting_Struct.Seg_Intensity_Weight || Setting_Changed(ii);
