@@ -48,6 +48,7 @@ classdef Segment_O
         Self = Create_Segment_Polygons(Self, Mask)
         Self = Curve_Guided_Segmentation(Self, Image, Entity_Polygon)
         Self = Curve_Guided_DAMAR(Self, ROI, Image_, Offset)
+        Self = Curve_Guided_Shift_DAMAR(Self, ROI, Image_, Offset)
         [Self, Found_Index] = Segment_MasterPoly_Query(Self, varargin)
         Self = Add_Segment_toList(Self, Poly_Obj, New_Segment, New_Segment_Struct)
         Self = Remove_Segment_fromList(Self, Polygon_Name)
