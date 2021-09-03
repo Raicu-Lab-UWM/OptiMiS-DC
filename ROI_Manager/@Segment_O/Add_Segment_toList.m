@@ -60,12 +60,12 @@ else
 %             if sum(New_Segment.Labeled_Image(:)) ~= 0
 %                 New_Segment = New_Segment.Create_Segment_Polygons(Poly_Obj.Mask);
 %             end;
-        case 'Curve Guided'
+        case 'Contour Guided Single Sample'
 %             if ~isfield(New_Segment_Struct, 'Seg_Membrane_Thckness'), Det_Membrane_Tick = 10; else Det_Membrane_Tick = New_Segment_Struct.Seg_Membrane_Thckness; end;
 %             [sprsMembrane_Polygon, ~] = New_Segment.Membrane_Select(Poly_Obj.Mask, Poly_Obj.Coordinates, Det_Membrane_Tick);
 %             New_Segment               = New_Segment.Curve_Guided_Segmentation(Poly_Obj.Mask, Poly_Obj.Membrane);
             New_Segment = New_Segment.Curve_Guided_DAMAR(Poly_Obj.Coordinates, Poly_Obj.Mask, mwHandles.Seg_Membrane_Thckness);
-        case 'Curve Guided Shift'
+        case 'Contour Guided Multiple Sample'
 %             added by Damar Badu for shift in segmentation
             New_Segment = New_Segment.Curve_Guided_DAMAR(Poly_Obj.Coordinates, Poly_Obj.Mask, mwHandles.Seg_Membrane_Thckness);
         case 'SLIC'
