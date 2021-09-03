@@ -33,9 +33,9 @@ for ii = 1:nSegments_Obj
     switch Self(ii).Segmentation_Method
     case 'Moving Square'
         Setting_Changed(ii) = Self(ii).nPixels_min_TH ~= 800 || Setting_Changed(ii);
-    case 'Curve Guided'
+    case 'Contour Guided Single Sample'
         Det_Membrane_Tick = New_Setting_Struct.Seg_Membrane_Thckness;
-    case 'Curve Guided Shift'
+    case 'Contour Guided Multiple Sample'
         Det_Membrane_Tick = New_Setting_Struct.Seg_Membrane_Thckness;
     case 'SLIC'
         Setting_Changed(ii) = Self(ii).nIterations ~= New_Setting_Struct.Seg_nIterations || Setting_Changed(ii);
