@@ -8,3 +8,5 @@ OptiMiS-DC/ROI-Mananger/Segment_setting-Tab_Changed.m: seg method menu in line 3
 
 20210903_DB: the naming 'Curve Guided' and 'Curve Guided Shift' are changed to 'Contour Guided Single Sample' and 'Contour Guided Multiple Sample' respectively
 in required files, Add_segment_tolist.m, Seg-Setting_Changed.m,Segment_setting-Tab_Changed.m.
+
+20210906_DB: fitgauss3.m and Gaussian_Fun.m were uploaded to @Ficos_Tool_kit
