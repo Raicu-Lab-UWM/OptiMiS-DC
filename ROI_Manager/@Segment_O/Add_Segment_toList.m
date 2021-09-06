@@ -67,7 +67,7 @@ else
             New_Segment = New_Segment.Curve_Guided_DAMAR(Poly_Obj.Coordinates, Poly_Obj.Mask, mwHandles.Seg_Membrane_Thckness);
         case 'Contour Guided Multiple Sample'
 %             added by Damar Badu for shift in segmentation
-            New_Segment = New_Segment.Curve_Guided_DAMAR(Poly_Obj.Coordinates, Poly_Obj.Mask, mwHandles.Seg_Membrane_Thckness);
+            New_Segment = New_Segment.Curve_Guided_Shift_DAMAR(Poly_Obj.Coordinates, Poly_Obj.Mask, mwHandles.Seg_Membrane_Thckness);
         case 'SLIC'
             New_Segment.nIterations                 = mwHandles.Seg_nIterations;
             New_Segment.Intensity_Variation_Coeff   = mwHandles.Seg_Intensity_Weight;
