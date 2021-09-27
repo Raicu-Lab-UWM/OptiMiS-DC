@@ -13,4 +13,5 @@ in required files, Add_segment_tolist.m, Seg-Setting_Changed.m,Segment_setting-T
 20210927_DB: saveastiff_wLabels.m is uploaded to Unmix_Toolkit folder.
 
 20210927_DB: UMD_Save_Icon_ClickedCallback.m, few lines are added from line 13 to 18 to avoid error on saving unmixed images.
+20210927_DB: Unimix_Tool_kit/@scene: In Save_Analyzied_Stacks.n file, Write_Tiff_File is change into Write_Tiff_File_2
 
