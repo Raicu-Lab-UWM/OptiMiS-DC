@@ -93,36 +93,36 @@ for hh = 1:nScenes
     waitbar(hh/nScenes, h, ['Wrting Image to File - ' num2str(round(hh/nScenes*100)) '%']);
 end
 
-if Save_List.Eapp, Write_Tiff_File(Eapp_Stack,  Path, 'Eapp', ['TH-' num2str(Threshold)], 32); end;
-if Save_List.Capp, Write_Tiff_File(Capp_Stack,  Path, 'Capp', ['TH-' num2str(Threshold)], 32); end;
+if Save_List.Eapp, Write_Tiff_File_2(Eapp_Stack,  Path, 'Eapp', ['TH-' num2str(Threshold)], 32); end;
+if Save_List.Capp, Write_Tiff_File_2(Capp_Stack,  Path, 'Capp', ['TH-' num2str(Threshold)], 32); end;
 
 if Save_List.Basic
-    Write_Tiff_File(FDonly_Stack, Path, 'FDonly', [], 32);
+    Write_Tiff_File_2(FDonly_Stack, Path, 'FDonly', [], 32);
     for ii = 1:length(Elem_Spect)
-        Write_Tiff_File(squeeze(Unmixed_Images_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, [], 32);
+        Write_Tiff_File_2(squeeze(Unmixed_Images_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, [], 32);
     end
 end
 
 if Save_List.Basic_FICoS
-    Write_Tiff_File(D_Plus_A_Stack, Path, 'D_pA', [], 32);
+    Write_Tiff_File_2(D_Plus_A_Stack, Path, 'D_pA', [], 32);
     for ii = 1:length(Elem_Spect)
-        Write_Tiff_File(squeeze(Unmixed_Images_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, [], 32);
+        Write_Tiff_File_2(squeeze(Unmixed_Images_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, [], 32);
     end
 end
 
-if Save_List.Chi2, Write_Tiff_File(Chi2_Stack, Path, 'Chi_Square', [], 32); end;
+if Save_List.Chi2, Write_Tiff_File_2(Chi2_Stack, Path, 'Chi_Square', [], 32); end;
 
 if Save_TH_Images
     if Save_List.Basic
-        Write_Tiff_File(FDonly_TH_Stack, Path, 'FDonly_TH-', [num2str(Threshold)], 32);
+        Write_Tiff_File_2(FDonly_TH_Stack, Path, 'FDonly_TH-', [num2str(Threshold)], 32);
         for ii = 1:length(Elem_Spect)
-            Write_Tiff_File(squeeze(Unmixed_Images_TH_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, ['TH-' num2str(Threshold)], 32);
+            Write_Tiff_File_2(squeeze(Unmixed_Images_TH_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, ['TH-' num2str(Threshold)], 32);
         end
     end
     if Save_List.Basic_FICoS
-        Write_Tiff_File(thD_Plus_A_Stack, Path, 'D_pA_TH-', [num2str(Threshold)], 32);
+        Write_Tiff_File_2(thD_Plus_A_Stack, Path, 'D_pA_TH-', [num2str(Threshold)], 32);
         for ii = 1:length(Elem_Spect)
-            Write_Tiff_File(squeeze(Unmixed_Images_TH_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, ['TH-' num2str(Threshold)], 32);
+            Write_Tiff_File_2(squeeze(Unmixed_Images_TH_Stack(ii,:,:,:)), Path, Elem_Spect(ii).Name, ['TH-' num2str(Threshold)], 32);
         end
     end
 end
