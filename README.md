@@ -12,3 +12,5 @@ in required files, Add_segment_tolist.m, Seg-Setting_Changed.m,Segment_setting-T
 20210906_DB: fitgauss3.m and Gaussian_Fun.m were uploaded to @Ficos_Tool_kit
 20210927_DB: saveastiff_wLabels.m is uploaded to Unmix_Toolkit folder.
 
+20210927_DB: UMD_Save_Icon_ClickedCallback.m, few lines are added from line 13 to 18 to avoid error on saving unmixed images.
+
