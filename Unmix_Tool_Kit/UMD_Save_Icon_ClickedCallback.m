@@ -10,6 +10,12 @@ end
 Low_TH_Val = handles.TH_Value(1); High_TH_Val = handles.TH_Value(2); Inc_TH_Val = handles.TH_Value(3);
 if High_TH_Val < Low_TH_Val, High_TH_Val = Low_TH_Val; end
 
+if strcmp(mwHandles.UM_Params.Analysis_Type,'FRET') % from line 13 to 17 added by Dammar with help of Gabby on 9/27/2020 to avoid error on saving unmixed stacks.
+     File_List_toSave = struct('Basic', 1, 'Eapp', 1, 'Basic_FICoS', 0, 'Capp', 0, 'Chi2', 1);
+else
+     File_List_toSave = struct('Basic', 0, 'Eapp', 0, 'Basic_FICoS', 1, 'Capp', 1, 'Chi2', 1);
+end
+
 if handles.Separate_Dir
     nScenes    = length(handles.Scene_Index);
     h          = waitbar(0,'Wrting Image to File - 0%');
