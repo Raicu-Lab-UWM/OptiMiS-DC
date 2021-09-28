@@ -10,8 +10,10 @@ OptiMiS-DC/ROI-Mananger/Segment_setting-Tab_Changed.m: seg method menu in line 3
 in required files, Add_segment_tolist.m, Seg-Setting_Changed.m,Segment_setting-Tab_Changed.m.
 
 20210906_DB: fitgauss3.m and Gaussian_Fun.m were uploaded to @Ficos_Tool_kit
-20210927_DB: saveastiff_wLabels.m is uploaded to Unmix_Toolkit folder.
+20210923_DB: saveastiff_wLabels.m is uploaded to Unmix_Toolkit folder.
 
-20210927_DB: UMD_Save_Icon_ClickedCallback.m, few lines are added from line 13 to 18 to avoid error on saving unmixed images.
-20210927_DB: Unimix_Tool_kit/@scene: In Save_Analyzied_Stacks.n file, Write_Tiff_File is change into Write_Tiff_File_2
+20210923_DB: UMD_Save_Icon_ClickedCallback.m, few lines are added from line 13 to 18 to avoid error on saving unmixed images.
+20210923_DB: Unimix_Tool_kit/@scene: In Save_Analyzied_Stacks.n file, Write_Tiff_File is change into Write_Tiff_File_2
+
+20210923_DB: Optimis-Dc, Main_Window.m file is complied and version 1 is constructed (FRET_FiCoS_An_v1) and is zipped and uploaded to the branch(OptiMis-DC_Branch_Segmentation)
 
