@@ -1,0 +1,346 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\MATLAB\OptiMiS-DC_version3_code\Optimis_DC_version4.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\MATLAB\OptiMiS-DC_version3_code" name="Optimis_DC_version4" preferred-package-location="C:\Users\dnbadu\Documents\OptiMiS-DC_version2.2\Optimis_DC_version2\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>Optimis_DC_version4</param.appname>
+    <param.icon>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_16.png</file>
+    </param.icons>
+    <param.version>4.0</param.version>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot>${PROJECT_ROOT}\Icons\Flash_Image.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\Optimis_DC_version4\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\Optimis_DC_version4\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\Optimis_DC_version4\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\Optimis_DC_version4\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\Optimis_DC_version4</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>false</param.windows.command.prompt>
+    <param.create.log>true</param.create.log>
+    <param.log.file>optimis_dc_log_file</param.log.file>
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	 Optimis_DC_version4 -? 
+	 Optimis_DC_version4 varargin 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 varargin  input arguments</param.help.text>
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\Main_Window.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Element_Spect_GUIO\Element_Spect_GUIO.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\Elementary_Spectrum_O.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\expElementart_Spectrum.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\expSpectrum.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\Find_Peak_Image.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\findBias_eSpect.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\getPolygon.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\getSpectrum.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\getWavelength.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\loadobj.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\saveobj.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\Calculate_Fit.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\Calculate_Histogram.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\Calculate_Sample_Param.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\Calculate_TEW_Info.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\FICoS_Analysis_O.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FICoS_Analysis_O\Find_FICoS_Item.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\Calculate_Fit.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\Calculate_Histogram.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\Calculate_Sample_Param.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\Calculate_TEW_Info.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\Find_FRET_Item.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\@FRET_Analysis_O\FRET_Analysis_O.m</file>
+      <file>${PROJECT_ROOT}\floatingCircShift.m</file>
+      <file>${PROJECT_ROOT}\GUI_Standard_Windows_and_Tools\Plot_Window_Generic.m</file>
+      <file>${PROJECT_ROOT}\GUI_Standard_Windows_and_Tools\Plot_Window_wScrollbar.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\ConcXa_metahist.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Find_Extrima_new.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Find_Extrima_new_Group_v3_merge.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Find_Extrima_wSegmentation_Group_v3.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Metahist_gui.fig</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Metahist_gui.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\MetaHist_peakarea_selection_findExtrima.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Optimize_metaHist_origin_fixBinsize_func.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Setting_window.fig</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Setting_window.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Sort_EappPeaks_wConc_andXa.asv</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Sort_EappPeaks_wConc_andXa.m</file>
+      <file>${PROJECT_ROOT}\Metahist_gui\Sort_EappPeaks_wConc_andXa_peakLevel.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Choosing_Peaks_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Find_Extrima.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Find_Extrima_new.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Find_Extrima_new_Group_v3_merge.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Find_Extrima_wSegmentation.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Find_Extrima_wSegmentation_Group_v3.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Fit_Gaussians.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\xCorr_Fit_1D.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Field_ofView_O\Add_FOV_toList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Field_ofView_O\Field_ofView_O.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Field_ofView_O\Load_Wavelength.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Field_ofView_O\loadFOV_List.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Field_ofView_O\Register_Scene.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Add_Polygon_toList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\autoSelect_ROI.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Draw_aPolygon.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\findROI.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\isEmpty.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\ListROI_inImageO.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Load_aPolygon_fromFile.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Load_Poly_fromIMJzip.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Load_Poly_fromXLS.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Membrane_Select.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Plot_Poly_Label.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Polygon_O.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Polygon_Prop_Valid.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Remove_Polygon_fromList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Save_Poly_List.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Save_ROIList_toTextFile.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\Update_Polygon_inList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Polygon_O\updateROI_Sample.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\ColorBar_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Curve_Guided_DAMAR.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Extract_Membrane_Icon_OnCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Filter_ROIs_wChiSquare.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Filter_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\findjobj.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\FOV_Axes_ButtonDownFcn_Callback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Gen_Image_List_Names.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\General_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Image_Stack_sBar_Callback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Init_ImageStack_Window.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Load_From_Multiple_Folders.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Load_Image.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Load_Poly_File_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\lsmread.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\membranesegmentation.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Polygon_List_Console.fig</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Polygon_List_Console.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Polygon_List_ListBox_Callback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Recreate_Polygons_Handles.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Remove_HotPixels_Fcn.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Remve_Poly_fromList_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\rmInitiate.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\rmLoadParam_fTextF.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\ROI_Prop_Editor_Window.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Save_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Save_Poly_List_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Segment_ROI_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Segment_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Setting_Param_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Show_All_Poly_cBox_Callback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Show_ROI_Polygons.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Show_Segments_cBox_Callback.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Test_Curve_Guided_DAMAR.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\Write_Tiff_File.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_Disp_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_ES_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_FICoS_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_General_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_Menu_Callback.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_Seg_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_TH_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Settings\Settings_UM_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Area_Unmixing_Func.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Calc_Hist_Stat.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Load_Aqu_Info.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Load_Dat_Images.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Load_Tiff_Image.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Load_Wavelength.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Register_Scene.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Remove_Scene_fromList.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Save_Analyzed_Histograms.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Save_Analyzied_Images.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Save_Analyzied_Stacks.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\Scene.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\UnMix.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\@Scene\XLS_Save_Area_Data.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\About_Menu_Callback.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Calculate_Tag.fig</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Calculate_Tag.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\ES_Info_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\ES_Initiate.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\ES_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\eSpect_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Load_ES_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Loading_Spectral_Files.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Organize_uiTable.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Plot_Data.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Setting_ES_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Signal_Select_Tool_Fcn.m</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Tag_Display.fig</file>
+      <file>${PROJECT_ROOT}\eSpectra_Module\Tag_Display.m</file>
+      <file>${PROJECT_ROOT}\export_fig.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Calc_Eapp_vsXA.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\calc_FICoS_Data_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\calc_FRET_Data_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Calculate_Capp_Conc_2D_Hist.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Calculate_Eapp_Conc_2D_Hist.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\CappScatter_FICoS2D_View_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_Calc_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_FRET_InfoCalc_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_General_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_Initiate.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\FICoS_Settings_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\fitgauss3.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Gaussian_Fun.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Hist_Check_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Histogram_and_corres_arr.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Load_FICoS_Data_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Load_FICoS_Data_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Load_FRET_Data_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Meta_Hist_Plot.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\MetaHist_FICoS2D_View_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\MetaHist_FICoS2D_View_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\MetaHist_FRET2D_View_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\MetaHist_View_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\MultiGauss_Fit.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Plot_Conc_Dependent_Graph.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Plot_Eapp_vsXA.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Plot_Eapp_vsXA_Conc.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Save_FICoS_Data_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Save_FICoS_Info_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Save_FRET_Info_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Scatter_FICoS2D_View_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\Scatter_FRET2D_View_FNC.m</file>
+      <file>${PROJECT_ROOT}\FICoS_Tool_Kit\TwoWL_Conc_Eapp_Calc.m</file>
+      <file>${PROJECT_ROOT}\Initiate_mainWindow.m</file>
+      <file>${PROJECT_ROOT}\Load_Param_frmText.m</file>
+      <file>${PROJECT_ROOT}\Peak_Selections_Software\Peak_Pecking_Group_v3.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Add_Segment_toList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Create_Segment_Polygons.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Curve_Guided_DAMAR.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Curve_Guided_Segmentation.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Curve_Guided_Shift_DAMAR.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\GrayScale_SLIC.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Initialte_Segment_Seed.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Membrane_Select.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Moving_Square_Segmentation.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Pixel_Dist_Label_Assign.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Remove_Segment_fromList.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Save_SegList_toTextFile.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Save_Segment_List.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Seg_Center_Avoid_Edge.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Seg_Setting_Changed.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Segment_MasterPoly_Query.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Segment_O.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager\@Segment_O\Test_Curve_Guided_DAMAR.m</file>
+      <file>${PROJECT_ROOT}\ROI_Manager_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\saveastiff_2.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\AddRemove_Tags.fig</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\AddRemove_Tags.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Bin_Spectrum.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Calculate_FICoS.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Calculate_FRET.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Calculate_Threshold.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Create_Image_Folder.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Curve_Plot.fig</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Curve_Plot.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Display_Axes_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Display_UnMix_Images.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Initiate_Window_Param.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Load_fromExcel.fig</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Load_fromExcel.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Load_Scene_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\Pixel_Unmixing.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\saveastiff_wLabels.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\TH_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Contrast_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Cursor_Icon_OffCallback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Cursor_Icon_OnCallback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Del_Scenes_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_General_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_getES_Data.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Setting_Tab_Fcn.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Settings_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UM_Stack_sBar_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UMD_Save_Icon_ClickedCallback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UnMix_Icon_Callback.m</file>
+      <file>${PROJECT_ROOT}\Unmix_Tool_Kit\UnMix_pButton_Callback.m</file>
+      <file>${PROJECT_ROOT}\Write_Tiff_File_2.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="Optimis_DC_version4.exe" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\MATLAB\OptiMiS-DC_version3_code\Optimis_DC_version4\for_testing\Optimis_DC_version4.exe</file>
+      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="readme.txt" optional="true">C:\Users\tkilleen\OneDrive - UWM\Documents\MATLAB\OptiMiS-DC_version3_code\Optimis_DC_version4\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="splash.png" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\MATLAB\OptiMiS-DC_version3_code\Optimis_DC_version4\for_testing\splash.png</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2022b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

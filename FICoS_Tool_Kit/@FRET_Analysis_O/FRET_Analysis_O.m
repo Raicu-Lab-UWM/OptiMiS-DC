@@ -10,12 +10,16 @@ classdef FRET_Analysis_O
         Sigma;
         Amplitude;
         Eapp;
-        TEW_Eapp;
-        TEW_FD;
-        TEW_FA;
         TEW_FDA_L1;
         TEW_FAD_L1;
         TEW_FAD_L2;
+        TEW_Eapp_L1;
+        Avg_FDA1;
+        Avg_FAD1;
+        Avg_FAD2;
+        Peak_FDA1;
+        Peak_FAD1;
+        Peak_FAD2;
     end
     methods (Static)
     end
@@ -25,5 +29,6 @@ classdef FRET_Analysis_O
         [Self, hHist_Figure] = Calculate_Fit(Self, Plot_Fit, hHist_Figure)
         Self  = Calculate_Sample_Param(Self)
         Self  = Calculate_TEW_Info(Self, Poly_Cords, Hist_Bin, imKDA_L1, imKAD_L1, imKDA_L2, eSpaectra)
+        Self  = Calculate_PeakLevel_info(Self)
     end
 end

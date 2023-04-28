@@ -69,10 +69,18 @@ if ~(Found == 0)
         x     = double(handles.FRET_List(Found).Bin_List);
         FRET_List_HistFit = Amp(1)*sqrt(2*pi)*Sigma(1)*Gaussian_Fun(x,Mu(1),Sigma(1));
 
-        handles.IntHist_FigureH  = figure('Name','Brightness Multi Histogram Plot','NumberTitle','off', 'MenuBar', 'none', 'ToolBar', 'figure');
+        handles.IntHist_FigureH  = figure('Name','Eapp Multi Histogram Plot','NumberTitle','off', 'MenuBar', 'none', 'ToolBar', 'figure');
         handles.IntHist_AxesH    = axes('Parent', handles.IntHist_FigureH, 'Position', [0.07, 0.12, 0.9, 0.82]); hold on;
-        handles.Hist_Curve_PlotH = plot(x, FRET_List_Eapp(:,1), 'bo', 'MarkerSize', 5, 'Parent', handles.IntHist_AxesH);
-        handles.Fit_Curve_PlotH  = plot(x, FRET_List_HistFit, 'r-', 'Parent', handles.IntHist_AxesH);
+        
+        currROI    = handles.FRET_List(Found);
+        Peaks      = currROI.Eapp(1,:);
+        
+        FRET_List_Eapp_1 =  FRET_List_Eapp(:,1);
+        handles.Hist_Curve_PlotH = plot(x(2:end), FRET_List_Eapp_1(2:end), '-o','LineWidth', 1.5, 'MarkerSize', 5, 'Parent', handles.IntHist_AxesH);    
+        handles.Fit_Curve_PlotH  = xline(Peaks(1), '--r', {Peaks(1)}, 'LineWidth', 2, 'Parent', handles.IntHist_AxesH);
+        handles.Fit_Curve_PlotH2 = xline(Peaks(2), '--r', {Peaks(2)}, 'LineWidth', 2, 'Parent', handles.IntHist_AxesH);
+
+%         handles.Fit_Curve_PlotH  = plot(x(2:end), FRET_List_HistFit(2:end), 'r-', 'Parent', handles.IntHist_AxesH);
     end
     
     % x = handles.FICoS_List(handles.Current_Polygon_Index(1)).Bin_List;
@@ -151,6 +159,7 @@ sBar_Index = get(hObject, 'Value');
 figure(handles.IntHist_FigureH);
 delete(handles.Hist_Curve_PlotH);
 delete(handles.Fit_Curve_PlotH);
+delete(handles.Fit_Curve_PlotH2);
 crPoly_Name  = Polygon_List(1).Name;
 if strcmp(mwHandles.Analysis_Type, 'FICoS')
     Found = handles.FICoS_List.Find_FICoS_Item(crPoly_Name);
@@ -165,15 +174,22 @@ if ~(Found == 0)
 %     IntHist_Curve            = handles.FICoS_List(handles.Current_Polygon_Index(1)).Histogram;
     Bin_Values               = anaList(Found).Bin_List;
     IntHist_Curve            = anaList(Found).Histogram;
-    handles.Hist_Curve_PlotH = plot(Bin_Values, IntHist_Curve(:,sBar_Index),...
-                                    'bo', 'MarkerSize', 5, 'Parent', handles.IntHist_AxesH);
+    IntHist_Curve_1          = IntHist_Curve(:,sBar_Index);
+    
+    currROI    = handles.FRET_List(Found);
+    Peaks      = currROI.Eapp(sBar_Index,:);
+    handles.Hist_Curve_PlotH = plot(Bin_Values(2:end),IntHist_Curve_1(2:end),...
+                                    '-o','LineWidth', 1.5, 'MarkerSize', 5, 'Parent', handles.IntHist_AxesH);
+
+    handles.Fit_Curve_PlotH  = xline(Peaks(1), '--r', {Peaks(1)}, 'LineWidth', 2, 'Parent', handles.IntHist_AxesH);
+    handles.Fit_Curve_PlotH2 = xline(Peaks(2), '--r', {Peaks(2)}, 'LineWidth', 2, 'Parent', handles.IntHist_AxesH);
 
     Amp   = double(anaList(Found).Amplitude);
     Sigma = double(anaList(Found).Sigma);
     Mu    = double(anaList(Found).Mu);
     x     = double(anaList(Found).Bin_List);
     anaList_HistFit          = Amp(sBar_Index)*sqrt(2*pi)*Sigma(sBar_Index)*Gaussian_Fun(x,Mu(sBar_Index),Sigma(sBar_Index));
-    handles.Fit_Curve_PlotH  = plot(Bin_Values, anaList_HistFit, 'r-', 'Parent', handles.IntHist_AxesH);
+%     handles.Fit_Curve_PlotH  = plot(Bin_Values, anaList_HistFit, 'r-', 'Parent', handles.IntHist_AxesH);
 
 %     Sample_Name              = handles.FICoS_List(handles.Current_Polygon_Index(1)).Master_Polygon;
     Sample_Name              = anaList(Found).Master_Polygon;
@@ -189,9 +205,10 @@ end
 
 function Snapshot_Icon_Callback(hObject, eventdata, handles)
 [Name, Path] = uiputfile([handles.Ana_Path '\Snapshot.png'], 'Save Snapshot');
-export_fig(handles.IntHist_AxesH, [Path '\' Name], '-png', '-transparent');
+% export_fig(handles.IntHist_AxesH, [Path '\' Name], '-png', '-transparent');
 
 mwHandles      = guidata(handles.mwFigureH);
+
 Polygon_Index  = mwHandles.Current_Polygon_Index;
 Analysis_Type  = mwHandles.Analysis_Type;
 if strcmp(Analysis_Type, 'FICoS')
@@ -203,13 +220,14 @@ if strcmp(Analysis_Type, 'FICoS')
     end
 else
     currROI    = handles.FRET_List(Polygon_Index);
-    Peaks(1,:) = currROI.Eapp;
-    Peaks      = reshape(Peaks', length(Peaks)/mwHandles.FICoS_Params.FICoS_nGaussians, mwHandles.FICoS_Params.FICoS_nGaussians);
+    Peaks      = currROI.Eapp;
+%     Peaks      = reshape(Peaks', length(Peaks)/mwHandles.FICoS_Params.FICoS_nGaussians, mwHandles.FICoS_Params.FICoS_nGaussians);
     Peaks      = Peaks';
 end
 ROI_Histograms = [currROI.Bin_List, currROI.Histogram];
 
-xlswrite([Path '\' Name(1:end-3) 'xlsx'], ROI_Histograms, 'Segments Histograms', 'B5');
+
+xlswrite([Path '\' Name(1:end-3) 'xlsx'],ROI_Histograms, 'Segments Histograms', 'B5');
 xlswrite([Path '\' Name(1:end-3) 'xlsx'], Peaks, 'Segments Histograms', 'C2');
 
 end

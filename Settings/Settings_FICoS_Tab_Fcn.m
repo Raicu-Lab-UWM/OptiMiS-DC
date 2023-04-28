@@ -62,7 +62,7 @@ FICoS_Fit_Range_Edit = uicontrol('Parent', Settings_FICoS_Tab, 'Style', 'edit', 
                                  'Callback', {@FICoS_Fit_Range_Edit_Callback, handles.output});
 
 % FICoS calculation method Popup Menu
-FICoS_Method_Menu = {'Peak Pecking', 'Gaussian Fitting', 'Mode'};
+FICoS_Method_Menu = {'Select peak wTH','Peak Pecking', 'Gaussian Fitting', 'Mode'}; % added by Dammar Peak Pecking TH
 FICoS_Method_Text = uicontrol('Parent', Settings_FICoS_Tab, 'Style', 'text', 'String', 'Method', ...
                                    'HorizontalAlignment', 'left', 'Units', 'Pixels', 'Position', [10 140 60 25], 'FontSize', 10);
 FICoS_Method_popMenu = uicontrol('Parent', Settings_FICoS_Tab, 'Style', 'popupmenu', 'String', FICoS_Method_Menu, ...
@@ -87,8 +87,8 @@ end;
 if ~isfield(handles.FICoS_Params, 'FICoS_Hist_Bin'), handles.FICoS_Params.FICoS_Hist_Bin = 0.001; 
 elseif isempty(handles.FICoS_Params.FICoS_Hist_Bin), handles.FICoS_Params.FICoS_Hist_Bin = 0.001;
 end;
-if ~isfield(handles.FICoS_Params, 'FICoS_MetaHist_Bin'), handles.FICoS_Params.FICoS_MetaHist_Bin = 0.02;
-elseif isempty(handles.FICoS_Params.FICoS_MetaHist_Bin), handles.FICoS_Params.FICoS_MetaHist_Bin = 0.02;
+if ~isfield(handles.FICoS_Params, 'FICoS_MetaHist_Bin'), handles.FICoS_Params.FICoS_MetaHist_Bin = 0.01;
+elseif isempty(handles.FICoS_Params.FICoS_MetaHist_Bin), handles.FICoS_Params.FICoS_MetaHist_Bin = 0.01;
 end;
 if ~isfield(handles.FICoS_Params, 'FICoS_nGaussians'), handles.FICoS_Params.FICoS_nGaussians = 1;
 elseif isempty(handles.FICoS_Params.FICoS_nGaussians), handles.FICoS_Params.FICoS_nGaussians = 1;

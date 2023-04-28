@@ -59,15 +59,15 @@ for ii = 1:length(mwHandles.Current_Polygon_Index)
     
     if max(curEapp_Map(:)) > Fit_Range(2), curEapp_Map = curEapp_Map/100; end;
     if ~isempty(Segment_Found)
-        FRET_Item = FRET_Item.Calculate_Histogram(Related_Segment.Polygons, FICoS_Hist_Bin, curEapp_Map, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, Fit_Range, mwHandles.eSpectra);
+        FRET_Item = FRET_Item.Calculate_Histogram(Related_Segment.Polygons, FICoS_Hist_Bin, curEapp_Map, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, Fit_Range); % mwHandles.eSpectra removed from function input
     else
-        FRET_Item = FRET_Item.Calculate_Histogram(Polygon.Coordinates, FICoS_Hist_Bin, curEapp_Map, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, Fit_Range, mwHandles.eSpectra);
+        FRET_Item = FRET_Item.Calculate_Histogram(Polygon.Coordinates, FICoS_Hist_Bin, curEapp_Map, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, Fit_Range);
     end
     if ~isempty(curFDA_WL1_Map) && ~isempty(curFAD_WL1_Map) && ~isempty(curFAD_WL2_Map)
         if ~isempty(Segment_Found)
-            FRET_Item = FRET_Item.Calculate_TEW_Info(Related_Segment.Polygons, handles.FICoS_Hist_Bin, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, mwHandles.eSpectra);
+            FRET_Item = FRET_Item.Calculate_TEW_Info(Related_Segment.Polygons, handles.FICoS_Hist_Bin, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map);
         else
-            FRET_Item = FRET_Item.Calculate_TEW_Info(Polygon.Coordinates, handles.FICoS_Hist_Bin, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map, mwHandles.eSpectra);
+            FRET_Item = FRET_Item.Calculate_TEW_Info(Polygon.Coordinates, handles.FICoS_Hist_Bin, curFDA_WL1_Map, curFAD_WL1_Map, curFAD_WL2_Map);
         end
     end
     
