@@ -168,13 +168,20 @@ WL              = ES_Obj.Wavelength;
 
 %{
 Edited by Thomas Killeen 2022-11-08
-Multiplying by the term D_WL was resulting in an artificially inflated spectral integral
-value. By multiplying by the width (or distance) between wavelengths the
-intensity value for each wavelength was "double counted" so to speak.
+(-)     D_WL            = WL(2:end)-WL(1:end-1);
+(-)     ES_Obj.Spectral_Integral = sum(D_WL.*(Spc(1:end-1)+Spc(2:end))/2);
+(+)     ES_Obj.Spectral_Integral = sum((Spc(1:end-1)+Spc(2:end))/2);
+
+Edited by Thomas Killeen 2023-05-01
+Reverted back to the old spectral integral method.
+(+)     D_WL            = WL(2:end)-WL(1:end-1);
+(+)     ES_Obj.Spectral_Integral = sum(D_WL.*(Spc(1:end-1)+Spc(2:end))/2);
+(-)     ES_Obj.Spectral_Integral = sum((Spc(1:end-1)+Spc(2:end))/2);
+%}
+
 D_WL            = WL(2:end)-WL(1:end-1);
 ES_Obj.Spectral_Integral = sum(D_WL.*(Spc(1:end-1)+Spc(2:end))/2);
-%}
-ES_Obj.Spectral_Integral = sum((Spc(1:end-1)+Spc(2:end))/2);
+
 ES_Obj.Spectral_Integral(ES_Obj.Spectral_Integral<0) = -ES_Obj.Spectral_Integral;
 handles.ES_Item_Folder   = uigetdir('','Save Spectrum to');
 ES_Obj.Path     = handles.ES_Item_Folder;
