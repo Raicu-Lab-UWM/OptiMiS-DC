@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC_version4.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC" name="Optimis_DC_version4" preferred-package-location="C:\Users\dnbadu\Documents\OptiMiS-DC_version2.2\Optimis_DC_version2\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>Optimis_DC</param.appname>
+  <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC" name="Optimis_DC" preferred-package-location="C:\Users\dnbadu\Documents\OptiMiS-DC_version2.2\Optimis_DC_version2\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>Optimis_DC_v4</param.appname>
     <param.icon>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon.ico</param.icon>
     <param.icons>
       <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_48.png</file>
@@ -16,15 +16,15 @@
     <param.description />
     <param.screenshot>${PROJECT_ROOT}\Icons\Flash_Image.png</param.screenshot>
     <param.guid />
-    <param.installpath.string>\Optimis_DC\</param.installpath.string>
+    <param.installpath.string>\Optimis_DC_v4\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>${PROJECT_ROOT}\Optimis_DC_version4\for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}\Optimis_DC_version4\for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}\Optimis_DC_version4\for_redistribution</param.output>
-    <param.logdir>${PROJECT_ROOT}\Optimis_DC_version4</param.logdir>
+    <param.intermediate>${PROJECT_ROOT}\Optimis_DC\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\Optimis_DC\Launcher</param.files.only>
+    <param.output>${PROJECT_ROOT}\Optimis_DC\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\Optimis_DC</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -42,8 +42,8 @@
     <param.checkbox>false</param.checkbox>
     <param.example />
     <param.help.text>Syntax 
-	 Optimis_DC -? 
-	 Optimis_DC varargin 
+	 Optimis_DC_v4 -? 
+	 Optimis_DC_v4 varargin 
  Input Arguments 
 	 -?  print help on how to use the application 
 	 varargin  input arguments</param.help.text>
@@ -60,7 +60,6 @@
       <param.install.notes />
       <param.target.install.notes />
       <param.intermediate />
-      <param.files.only />
       <param.output />
       <param.logdir />
       <param.enable.clean.build />
@@ -82,6 +81,9 @@
       <file>${PROJECT_ROOT}\Main_Window.m</file>
     </fileset.main>
     <fileset.resources>
+      <file>${PROJECT_ROOT}\Config\MainWindow_Params - Explenation.txt</file>
+      <file>${PROJECT_ROOT}\Config\MainWindow_Params.txt</file>
+      <file>${PROJECT_ROOT}\Config\Readme_software_info.txt</file>
       <file>${PROJECT_ROOT}\eSpectra_Module\@Element_Spect_GUIO\Element_Spect_GUIO.m</file>
       <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\Elementary_Spectrum_O.m</file>
       <file>${PROJECT_ROOT}\eSpectra_Module\@Elementary_Spectrum_O\expElementart_Spectrum.m</file>
@@ -108,6 +110,93 @@
       <file>${PROJECT_ROOT}\floatingCircShift.m</file>
       <file>${PROJECT_ROOT}\GUI_Standard_Windows_and_Tools\Plot_Window_Generic.m</file>
       <file>${PROJECT_ROOT}\GUI_Standard_Windows_and_Tools\Plot_Window_wScrollbar.m</file>
+      <file>${PROJECT_ROOT}\Icons\Accept_Icon_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Amplitude_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Bright_Hist_Fitting_pButton.png</file>
+      <file>${PROJECT_ROOT}\Icons\Bright_Hist_Fitting_pButton_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Calculator_Button_50x50_3.png</file>
+      <file>${PROJECT_ROOT}\Icons\Capp_Scatter_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\Curve_Stack_Button_50x50_3.png</file>
+      <file>${PROJECT_ROOT}\Icons\Disply_Table.png</file>
+      <file>${PROJECT_ROOT}\Icons\Down_Arrow.png</file>
+      <file>${PROJECT_ROOT}\Icons\Elementar_Spectra_Icon_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Elementar_Spectra_Icon_2_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Elementary_Spectra_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Elementary_Spectra_Icon_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Elementary_Spectra_Icon_128x128_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\ES_Info_Icon_Image_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\Export_ES_Icon_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_woSunlike_Rays.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_woSunlike_Rays_500x200.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_woSunlike_Rays_500x200_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_woSunlike_Rays_600x250.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_wSunlike_Rays.png</file>
+      <file>${PROJECT_ROOT}\Icons\FFS_Logo_wSunlike_Rays_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\FICoS_2D_Hist_Plot_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\FICoS_InfoCalc_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\FIF_Spectrometry.png</file>
+      <file>${PROJECT_ROOT}\Icons\FIF_Spectrometry_48x48.png</file>
+      <file>${PROJECT_ROOT}\Icons\FIF_Spectrometry_Splash.png</file>
+      <file>${PROJECT_ROOT}\Icons\file_save.png</file>
+      <file>${PROJECT_ROOT}\Icons\Fit_Icon_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Fitting_Curve_Control_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Fitting_Curve_Control_Icon_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Flash_Image.png</file>
+      <file>${PROJECT_ROOT}\Icons\Histogram_16_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Histogram_Fit_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Histogram_Icon_3.png</file>
+      <file>${PROJECT_ROOT}\Icons\Icon_Image.png</file>
+      <file>${PROJECT_ROOT}\Icons\Icons_ROI_Manager.png</file>
+      <file>${PROJECT_ROOT}\Icons\lArrow_16x16_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Left_Arrow.png</file>
+      <file>${PROJECT_ROOT}\Icons\Load_Curves_Icon_50x50_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Logo_FFS_Analysis_Toolkit.png</file>
+      <file>${PROJECT_ROOT}\Icons\Meta_Hist_Button_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\Metahist_snapshot.png</file>
+      <file>${PROJECT_ROOT}\Icons\Metahist_snapshot_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Minus_16x16_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Mu_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Multi_Curve_Fit.png</file>
+      <file>${PROJECT_ROOT}\Icons\Multi_Fit_Icon_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\New_ES_Icon_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\open_icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plot_Model_Icon_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plot_Model_Icon_16x16_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plotting_Menu_pButton.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plotting_Menu_pButton_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plotting_Menu_pButton_128x128_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Plus_16x16_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Polygon_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Polygon_128x128_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Polygon_128x128_3.png</file>
+      <file>${PROJECT_ROOT}\Icons\Polygon_pButon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Present_Data_inTable_Icon_50x50.png</file>
+      <file>${PROJECT_ROOT}\Icons\rArrow_16x16_2.png</file>
+      <file>${PROJECT_ROOT}\Icons\Reject_Icon_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Remove_Column_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Remove_Row_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Rename_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Right_Arrow.png</file>
+      <file>${PROJECT_ROOT}\Icons\Run_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Save_Button_50x50_5.png</file>
+      <file>${PROJECT_ROOT}\Icons\Save_Button_50x50_6.png</file>
+      <file>${PROJECT_ROOT}\Icons\Setting_Icon_50x50_5.png</file>
+      <file>${PROJECT_ROOT}\Icons\Settings_16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Settings_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Settings_pButon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Sigma_Icon.png</file>
+      <file>${PROJECT_ROOT}\Icons\Single_Curve_Fit.png</file>
+      <file>${PROJECT_ROOT}\Icons\Snapshot_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Snapshot_2_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Spetrum_Displ_pButton.png</file>
+      <file>${PROJECT_ROOT}\Icons\Sum_Icon_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Surf_Plot_50x50_4.jpg</file>
+      <file>${PROJECT_ROOT}\Icons\Surf_Plot_50x50_5.jpg</file>
+      <file>${PROJECT_ROOT}\Icons\Top_View_50x50_2.jpg</file>
+      <file>${PROJECT_ROOT}\Icons\UnMix_16x16.png</file>
+      <file>${PROJECT_ROOT}\Icons\Unmix_Icon_2_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Unmix_Icon_3_128x128.png</file>
+      <file>${PROJECT_ROOT}\Icons\Up_Arrow.png</file>
       <file>${PROJECT_ROOT}\Metahist_gui\ConcXa_metahist.m</file>
       <file>${PROJECT_ROOT}\Metahist_gui\Find_Extrima_new.m</file>
       <file>${PROJECT_ROOT}\Metahist_gui\Find_Extrima_new_Group_v3_merge.m</file>
@@ -364,9 +453,9 @@
       <file>${PROJECT_ROOT}\Write_Tiff_File_2.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="Optimis_DC.exe" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC_version4\for_testing\Optimis_DC.exe</file>
-      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="readme.txt" optional="true">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC_version4\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\Optimis_DC_version4\for_testing" name="splash.png" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC_version4\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\Optimis_DC\for_testing" name="splash.png" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\Optimis_DC\for_testing" name="Optimis_DC_v4.exe" optional="false">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC\for_testing\Optimis_DC_v4.exe</file>
+      <file location="${PROJECT_ROOT}\Optimis_DC\for_testing" name="readme.txt" optional="true">C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>

@@ -5,7 +5,7 @@ addpath(genpath('.\ROI_Manager'));
 addpath(genpath('.\GUI_Standard_Windows_and_Tools'));
 addpath(genpath('.\Unmix_Tool_Kit'));
 addpath(genpath('.\FICoS_Tool_Kit'));
-addpath(genpath('.\Settings'));
+addpath(genpath('.\Settings'));     
 addpath(genpath('.\Peak_Selections_Software'));
 addpath(genpath('.\Metahist_gui')); 
 
