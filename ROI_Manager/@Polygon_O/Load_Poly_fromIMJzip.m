@@ -31,8 +31,15 @@ ROIs = ReadImageJROI([Path '\' Name]);
 for ii = 1:length(ROIs)
     Polygon_Prop.Polygon_Name = ROIs{1,ii}.strName;
     if ROIs{1,ii}.nPosition > 0, Polygon_Prop.Image_Frame_Index = ROIs{1,ii}.nPosition; else Polygon_Prop.Image_Frame_Index = 1; end;
-    Poly_Coords               = ROIs{1,ii}.mnCoordinates + 0.5;
-    Poly_Coords               = [Poly_Coords; Poly_Coords(1,:)];
+    
+    if isfield(ROIs{1,1},'mnCoordinates')
+        Poly_Coords               = ROIs{1,ii}.mnCoordinates + 0.5;
+        Poly_Coords               = [Poly_Coords; Poly_Coords(1,:)];
+    elseif isfield(ROIs{1,1},'Coords')
+        Poly_Coords               = ROIs{1,ii}.Coords + 0.5;
+        Poly_Coords               = [Poly_Coords; Poly_Coords(1,:)];
+    end
+
     if ~isempty(ROIs{1,ii}.strType), Polygon_Prop.Circle_Mode = ROIs{1,ii}.strType; end;
     Obj = Obj.Add_Polygon_toList(Poly_Coords, Polygon_Prop);
 end;

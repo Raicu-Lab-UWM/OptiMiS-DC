@@ -40,6 +40,8 @@ switch Editing_Tool
         handPoly = impoly(hAxes, Polygon_Cords);
     case 'Polygon'
         hold(hAxes ,'on'); handPoly = plot(hAxes, Polygon_Cords(:,1),Polygon_Cords(:,2),'r','LineWidth', 1);
+    case 'Rectangle'
+        hold(hAxes ,'on'); handPoly = plot(hAxes, Polygon_Cords(:,1),Polygon_Cords(:,2),'r','LineWidth', 1);
     otherwise
         Polygon_Cord = [];
 end;
