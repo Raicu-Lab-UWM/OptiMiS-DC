@@ -31,14 +31,21 @@ switch File_Type
         writetable(struct2table(FICoS_Setting_Struct), [handles.Ana_Path '\' Name], 'Sheet', 'FICoS_Settings', 'Range', 'B3');
         writetable(struct2table(Disp_Setting_Struct), [handles.Ana_Path '\' Name], 'Sheet', 'Disp_Settings', 'Range', 'B3');
         if ~noConc
+            xlswrite([handles.Ana_Path '\' Name], handles.TEW_Eapp_Conc_Info, 'Eapp_Conc_Info', 'A2');
+            xlswrite([handles.Ana_Path '\' Name], {'D/pixel','A/pixel','Prot/pixel', 'xA', 'Eapp'}, 'Eapp_Conc_Info', 'A1');
             xlswrite([handles.Ana_Path '\' Name], handles.TEW_Molecular_Info, 'TEW_Molecular_Info', 'A2');
             xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', '<Eapp>', 'FDA-1', 'FAD-1', 'FAD-2', 'Eapp'}, 'TEW_Molecular_Info', 'A1');
-            xlswrite([handles.Ana_Path '\' Name], handles.Conc_Val(1:size(Hist2D,2)-1)', 'Eapp_Conc_2D-Hist', 'B1');
-            xlswrite([handles.Ana_Path '\' Name], Hist2D, 'Eapp_Conc_2D-Hist', 'A2');
-            xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', 'Eapp', '<Eapp>'}, 'Scatter_Plot_Info', 'A1');
-            xlswrite([handles.Ana_Path '\' Name], handles.Scatter_Plot_Info, 'Scatter_Plot_Info', 'A2');
-            xlswrite([handles.Ana_Path '\' Name], {'xA', 'Eapp', 'xA-STD', 'Eapp-STD'}, 'Eapp_vs_xA', 'A1');
-            xlswrite([handles.Ana_Path '\' Name], Eapp_vsXA_Info, 'Eapp_vs_xA', 'A2');
+            xlswrite([handles.Ana_Path '\' Name], handles.Peak_Eapp_Conc_Info, 'Peak_Eapp_Conc_Info', 'A2');
+            xlswrite([handles.Ana_Path '\' Name], {'D/pixel','','A/pixel','','Prot/pixel','', 'xA','', 'Eapp'}, 'Peak_Eapp_Conc_Info', 'A1');
+            xlswrite([handles.Ana_Path '\' Name], handles.Peak_Molecular_Info, 'Peak_Molecular_Info', 'A2');
+            xlswrite([handles.Ana_Path '\' Name], {'Concentration','', 'xA','', '<Eapp>','', 'FDA-1','', 'FAD-1','', 'FAD-2','', 'Eapp'}, 'Peak_Molecular_Info', 'A1');
+            
+%             xlswrite([handles.Ana_Path '\' Name], handles.Conc_Val(1:size(Hist2D,2)-1)', 'Eapp_Conc_2D-Hist', 'B1');
+%             xlswrite([handles.Ana_Path '\' Name], Hist2D, 'Eapp_Conc_2D-Hist', 'A2');
+%             xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', 'Eapp', '<Eapp>'}, 'Scatter_Plot_Info', 'A1');
+%             xlswrite([handles.Ana_Path '\' Name], handles.Scatter_Plot_Info, 'Scatter_Plot_Info', 'A2');
+%             xlswrite([handles.Ana_Path '\' Name], {'xA', 'Eapp', 'xA-STD', 'Eapp-STD'}, 'Eapp_vs_xA', 'A1');
+%             xlswrite([handles.Ana_Path '\' Name], Eapp_vsXA_Info, 'Eapp_vs_xA', 'A2');
         else
             xlswrite([handles.Ana_Path '\' Name], Eapp_Peak_List, 'Eapp_Peak_List', 'A2');
         end

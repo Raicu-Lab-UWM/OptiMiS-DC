@@ -64,7 +64,7 @@ FICoS_Fit_Range_Edit = uicontrol('Parent', FICoS_Setting_Tab, 'Style', 'edit', .
                                  'Callback', {@FICoS_Fit_Range_Edit_Callback, handles.output});
 
 % FICoS calculation method Popup Menu
-FICoS_Method_Menu = {'Peak Pecking', 'Gaussian Fitting', 'Mode'};
+FICoS_Method_Menu = {'Select peak wTH','Peak Pecking', 'Gaussian Fitting', 'Mode'};
 FICoS_Method_Text = uicontrol('Parent', FICoS_Setting_Tab, 'Style', 'text', 'String', 'Method', ...
                                    'HorizontalAlignment', 'left', 'Units', 'Pixels', 'Position', [10 140 60 25], 'FontSize', 10);
 FICoS_Method_popMenu = uicontrol('Parent', FICoS_Setting_Tab, 'Style', 'popupmenu', 'String', FICoS_Method_Menu, ...

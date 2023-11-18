@@ -20,20 +20,20 @@ Flt_Method, X Square
 Flt_LowCut, 1000
 Flt_HighCut, 10000
 Seg_Membrane_Thckness, 10
-Seg_Method, Moving Square
+Seg_Method, Contour Guided Multiple Sample
 Seg_Type, Area
-Seg_Split_Value, [30 30]
+Seg_Split_Value, [200 200]
 Seg_nIterations, 10
 Seg_Intensity_Weight, 1
 Seg_nVert_inPoly, 15
-FICoS_Hist_Bin, 0.001
+FICoS_Hist_Bin, 0.005
 FICoS_MetaHist_Bin, 0.02
-FICoS_nGaussians, 1
+FICoS_nGaussians, 2
 FICoS_Fit_Method, Gaussian (Iterative)
-FICoS_Fit_Range, [-1 1]
-FICoS_Method, Peak Pecking
+FICoS_Fit_Range, [0 1]
+FICoS_Method, Select peak wTH
 SEW_Capp, 1
-Capp_minRange, -1
+Capp_minRange, 0
 Capp_maxRange, 1
 Capp_BinSize, 0.02
 Conc_minRange, 0
@@ -46,7 +46,13 @@ Flt_Method, X Square
 Flt_LowCut, 1000
 Flt_HighCut, 10000
 Remove_HotPixels, 1
-Analysis_Type, FICoS
+Analysis_Type, FRET
 xA_Bin, 0.05
-SlopD, 689
-SlopA, 1534
+SlopD, 37985.4
+SlopA, 7440.1
+psfD, 1.2355E-19
+psfA, 2.0631E-19
+qD, 0.55
+qA, 0.61
+rowD, 10.146
+rowA, 0.127

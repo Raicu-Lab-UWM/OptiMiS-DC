@@ -23,7 +23,7 @@ Flt_HighCut, 10000   High Filter cutoff
 Seg_Membrane_Thckness, 10  Membrane thickness extracted from the 
                            cell in pixels
 Seg_Method, Moving Square  Segmentation method: Moving Square, 
-                           Curve Guided, or SLIC
+                           Contour Guided Single Sample, Contour Guided Multiple Sample,or SLIC
 Seg_Type, Area       Segmentation type: Area or Number of 
                      Segments
 Seg_Split_Value, [30 30] The value used to segment the cell in 
