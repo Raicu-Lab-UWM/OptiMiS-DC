@@ -1,12 +1,12 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
   <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC" name="Optimis_DC" preferred-package-location="C:\Users\dnbadu\Documents\OptiMiS-DC_version2.2\Optimis_DC_version2\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>Optimis_DC_v4</param.appname>
-    <param.icon>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon.ico</param.icon>
+    <param.icon>${PROJECT_ROOT}\Optimis_DC_resources\icon.ico</param.icon>
     <param.icons>
-      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_48.png</file>
-      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_32.png</file>
-      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_24.png</file>
-      <file>${PROJECT_ROOT}\Optimis_DC_version4_resources\icon_16.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_16.png</file>
     </param.icons>
     <param.version>4.1</param.version>
     <param.authnamewatermark />
@@ -14,7 +14,7 @@
     <param.company />
     <param.summary />
     <param.description />
-    <param.screenshot>${PROJECT_ROOT}\Icons\Flash_Image.png</param.screenshot>
+    <param.screenshot>${PROJECT_ROOT}\Optimis_DC\Launcher\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\Optimis_DC_v4\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
