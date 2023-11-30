@@ -179,8 +179,7 @@ Reverted back to the old spectral integral method.
 (-)     ES_Obj.Spectral_Integral = sum((Spc(1:end-1)+Spc(2:end))/2);
 %}
 
-D_WL            = WL(2:end)-WL(1:end-1);
-ES_Obj.Spectral_Integral = sum(D_WL.*(Spc(1:end-1)+Spc(2:end))/2);
+ES_Obj.Spectral_Integral = sum((Spc(1:end-1)+Spc(2:end))/2);
 
 ES_Obj.Spectral_Integral(ES_Obj.Spectral_Integral<0) = -ES_Obj.Spectral_Integral;
 handles.ES_Item_Folder   = uigetdir('','Save Spectrum to');
