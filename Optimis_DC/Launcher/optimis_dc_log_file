@@ -1,0 +1,14 @@
+Error using dir
+Name must be a text scalar.
+
+Error in Load_Scene_Icon_Callback (line 8)
+
+Error while evaluating PushTool ClickedCallback.
+
+Unrecognized function or variable 'Sample_Point_Plot'.
+
+Error in matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)Sample_Point_Plot('figure1_DeleteFcn',hObject,eventdata,guidata(hObject))
+
+Error using Curve_Plot>Curve_Plot_Fig_CloseRequestFcn
+Error while evaluating Figure DeleteFcn.
+
