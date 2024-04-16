@@ -2,8 +2,8 @@ Ana_Path, .\
 Hor_Shift, 0.0163
 Sample_Type, Cells
 Pen_Size, 1
-Separate_Dir, 1
-Inc_Sub_Dir, 1
+Separate_Dir, 0
+Inc_Sub_Dir, 0
 Show_Warnings, 0
 Image_Frame_Index, 1
 Polygon_Type, Patch
@@ -41,7 +41,7 @@ Conc_maxRange, 300
 Conc_BinSize, 10
 Pixel_Size, 1
 Pr_MultFact, 1
-Accum_Data, 1
+Accum_Data, 0
 Flt_Method, X Square
 Flt_LowCut, 1000
 Flt_HighCut, 10000
