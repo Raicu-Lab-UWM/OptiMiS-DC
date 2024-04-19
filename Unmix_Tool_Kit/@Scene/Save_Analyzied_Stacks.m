@@ -90,7 +90,7 @@ for hh = 1:nScenes
             Unmixed_Images_TH_Stack(ii,:,:,hh) = Unmixed_Images(ii,:,:);
         end
     end
-    waitbar(hh/nScenes, h, ['Wrting Image to File - ' num2str(round(hh/nScenes*100)) '%']);
+    waitbar(hh/nScenes, h, ['Writing Image to File - ' num2str(round(hh/nScenes*100)) '%']);
 end
 
 if Save_List.Eapp, Write_Tiff_File_2(Eapp_Stack,  Path, 'Eapp', ['TH-' num2str(Threshold)], 32); end;
