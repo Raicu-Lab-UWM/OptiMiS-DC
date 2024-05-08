@@ -1,5 +1,7 @@
 function Pixel_Curves = Pixel_Unmixing (Scene_Inst, Image_Stack, Tags, Background, x, y, Path, Name, Pen_Size, Unmix_Method, Use_Fitted_Spect)
 
+%Current_Image        = Image_Stack(:,:,1); % Added by TK to check the raw data. 20240503
+
 if nargin < 11, Use_Fitted_Spect = 0; elseif isempty(Use_Fitted_Spect), Use_Fitted_Spect = 0; end
 Number_of_Tags    = length(Tags);
 [~, bgTag_Index]  = Tags.findBias_eSpect;

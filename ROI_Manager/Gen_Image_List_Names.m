@@ -46,7 +46,9 @@ for ii = 1:length(Image_Dir_Info)
         end;
     end;
     if strcmp(Path, Data_Path)
-        waitbar(ii/Total_Dir_in_Root, Bar_Handle, Image_Dir_Info(ii).name);
+        waittext = sprintf('Loading images: \n%s',Image_Dir_Info(ii).name); % Added this 2024/04/19 by TK
+        waitbar(ii/length(Image_Dir_Info), Bar_Handle, waittext);           % Added this 2024/04/19 by TK
+        %waitbar(ii/length(Image_Dir_Info), Bar_Handle, Image_Dir_Info(ii).name);
     end;
 end;
 if strcmp(Path, Data_Path)

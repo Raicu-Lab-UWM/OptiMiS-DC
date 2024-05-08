@@ -34,6 +34,7 @@ function currUnmix_Images = UnMix(Image_Stack, Spectrum, Unmix_Method_Index, Bac
 xx          = size(Image_Stack,1);
 yy          = size(Image_Stack,2);
 Image_Stack = Image_Stack - Background;
+%Image_Stack1 = Image_Stack(:,:,1); % a check for TK
 switch Unmix_Method_Index
     case 1 % 'Analytic'
         if size(Spectrum,1) >= size(Image_Stack,3)

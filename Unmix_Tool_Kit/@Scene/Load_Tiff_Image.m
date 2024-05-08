@@ -18,9 +18,12 @@ if Depth > 1
         if Hor_Shift ~= 0
 %             Image_Stack(:,:,ii) = floatingCircShift(TifLink.read(),[0,-(ii-1)*Hor_Shift]);
             Image_Stack(:,:,ii) = circshift(TifLink.read(),[0,-round((ii-1)*Hor_Shift)]);
+            %CheckImage = Image_Stack(:,:,ii);  %a check for TK
         else
             Image_Stack(:,:,ii) = TifLink.read();
+            %CheckImage = Image_Stack(:,:,1);   %a check for TK
         end;
+        %CheckImage = Image_Stack(:,:,1);       %a check for TK
         if Show_wBar, waitbar(ii/Depth); end
     end;
     if Show_wBar, close(h); end
@@ -36,7 +39,8 @@ elseif Depth == 1
     Image_Stack(:,:) = TifLink.read();
 end;
 TifLink.close();
-Bias        = min(Image_Stack(:))*0.95;
+%Bias        = min(Image_Stack(:))*0.95; % Commented out by TK 20240503
+Bias = 0;   % Added by TK 20240503
 Image_Stack = Image_Stack - Bias;
 if Remove_HotPixels
     TH        = 8;
