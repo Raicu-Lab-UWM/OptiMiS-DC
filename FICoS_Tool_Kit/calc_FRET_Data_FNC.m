@@ -78,7 +78,7 @@ for ii = 1:length(mwHandles.Current_Polygon_Index)
     if ii == 1
         [FRET_Item, hHist_Figure] = FRET_Item.Calculate_Fit(0);
     else
-        [FRET_Item, hHist_Figure] = FRET_Item.Calculate_Fit(0, hHist_Figure);
+%TK 2024/12/05        [FRET_Item, hHist_Figure] = FRET_Item.Calculate_Fit(0, hHist_Figure);
     end
     
     % Calculate FICoS and Concentration

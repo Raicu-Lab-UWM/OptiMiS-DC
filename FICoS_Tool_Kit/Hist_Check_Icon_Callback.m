@@ -22,6 +22,10 @@
 % For technical questions contact biener@uwm.edu
 %------------------------------------------------------------------------------
 function Hist_Check_Icon_Callback (hObject, eventdata)
+
+%something in this function dumps the handles.Polygon_List and
+%handles.Segment_List data. TK 2024/12/05
+
 handles = guidata(hObject);
 
 mwHandles = guidata(handles.mwFigureH);
