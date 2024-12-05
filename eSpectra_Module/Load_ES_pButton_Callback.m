@@ -40,7 +40,8 @@ switch Name_Ext
         end;
     case 'xlsx'
         [~, curr_Path, Spect_File_Name, Sheet, Upper_Left, Lower_Right] = Load_fromExcel(curr_Path);
-        [Spect_Data, ES_Titles] = xlsread(Spect_File_Name, Sheet, [Upper_Left ':' Lower_Right]);
+        %[Spect_Data, ES_Titles] = xlsread(Spect_File_Name, Sheet, [Upper_Left ':' Lower_Right]);
+        Spect_Data = xlsread(Spect_File_Name, Sheet, [Upper_Left ':' Lower_Right]);
         [~, Num_of_Comp]        = size(Spect_Data);
 
         [Wavelength, Calib_Index] = sort(Spect_Data(:,1));
@@ -48,7 +49,7 @@ switch Name_Ext
 
         for ii = 2:Num_of_Comp
             ES_Obj.Spectral_Integral = trapz(Wavelength,Spect_Data(:,ii));
-            ES_Obj.Name              = char(ES_Titles(ii));
+            %ES_Obj.Name              = char(ES_Titles(ii));
             ES_Obj.Path              = curr_Path;
             Spectrum                 = Spect_Data(:,ii)/max(Spect_Data(:,ii));
             ES_Obj.Spectrum          = Spectrum(Calib_Index);

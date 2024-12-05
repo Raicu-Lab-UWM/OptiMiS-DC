@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC" name="Optimis_DC" preferred-package-location="C:\Users\dnbadu\Documents\OptiMiS-DC_version2.2\Optimis_DC_version2\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="2692283162" file="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC.prj" location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC" name="Optimis_DC" preferred-package-location="C:\Users\tkilleen\OneDrive - UWM\Documents\GitHub\OptiMiS-DC\Optimis_DC\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>Optimis_DC_v4</param.appname>
     <param.icon>${PROJECT_ROOT}\Optimis_DC_resources\icon.ico</param.icon>
     <param.icons>
@@ -8,7 +8,7 @@
       <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\Optimis_DC_resources\icon_16.png</file>
     </param.icons>
-    <param.version>4.1</param.version>
+    <param.version>4.2</param.version>
     <param.authnamewatermark />
     <param.email />
     <param.company />
@@ -304,49 +304,6 @@
     </fileset.resources>
     <fileset.package />
     <fileset.depfun>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\Flactuation_Theory_App\Gauss_Fit.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\Add_FOV_toList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\Field_ofView_O.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\FOV2Stack.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\Load_Wavelength.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\loadFOV_List.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Field_ofView_O\Register_Scene.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Add_Polygon_toList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\autoSelect_ROI.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Calculate_Area.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Draw_aPolygon.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\findROI.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\isEmpty.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\ListROI_inImageO.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Load_aPolygon_fromFile.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Load_Poly_fromIMJzip.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Load_Poly_fromXLS.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Membrane_Select.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Plot_Poly_Label.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Polygon_O.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Polygon_Prop_Valid.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Remove_Polygon_fromList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Save_Poly_List.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Save_ROIList_toTextFile.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\Update_Polygon_inList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Polygon_O\updateROI_Sample.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Add_Segment_toList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Create_Segment_Polygons.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Curve_Guided_DAMAR.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Curve_Guided_Segmentation.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\GrayScale_SLIC.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Initialte_Segment_Seed.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Membrane_Select.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Moving_Square_Segmentation.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Pixel_Dist_Label_Assign.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Remove_Segment_fromList.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Save_SegList_toTextFile.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Save_Segment_List.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Seg_Center_Avoid_Edge.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Seg_Setting_Changed.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Segment_MasterPoly_Query.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Segment_O.m</file>
-      <file>C:\Users\tkilleen\OneDrive - UWM\Documents\FIF_spectrometry_Suite_V2\Comercial_Suite\ROI_Manager\@Segment_O\Test_Curve_Guided_DAMAR.m</file>
       <file>${PROJECT_ROOT}\About_Menu_Callback.m</file>
       <file>${PROJECT_ROOT}\eSpectra_Module\Calculate_Tag.fig</file>
       <file>${PROJECT_ROOT}\eSpectra_Module\Calculate_Tag.m</file>
