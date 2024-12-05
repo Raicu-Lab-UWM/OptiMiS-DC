@@ -39,7 +39,7 @@ for ii = 1:length(FRET_List)
     Polygon_number=ones(no_segments,1)*ii;
     TEW_Polygon_number = [TEW_Polygon_number; Polygon_number];
 
-    Polygon_frame=ones(no_segments,1)*Polygon_Item.Image_Frame_Index;
+    Polygon_frame=ones(no_segments,1)*double(Polygon_Item.Image_Frame_Index); %incompatible combination when P_I.I_F_I is not a double TK 2024/12/05
     TEW_Polygon_frame = [TEW_Polygon_frame; Polygon_frame];
 
     for jj=1:no_segments
