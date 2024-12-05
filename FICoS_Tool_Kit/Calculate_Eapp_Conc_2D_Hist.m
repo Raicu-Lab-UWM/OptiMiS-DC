@@ -3,10 +3,16 @@ function [handles, Stack_Conc_Bin] = Calculate_Eapp_Conc_2D_Hist(handles, Plot_T
 mwHandles = guidata(handles.mwFigureH);
 
 FRET_List = handles.FRET_List;
+Polygon_List=handles.Polygon_List;
+Segment_List=handles.Segment_List;
 
 TEW_FDA_L1    = [];
 TEW_FAD_L1    = [];
 TEW_FAD_L2    = [];
+TEW_Polygon_frame=[];
+TEW_Polygon_number=[];
+TEW_Segment_coord=[];
+TEW_PolygonNames=[];
 Eapp          = [];
 
 Peak_FDA1     = []; % added by DB April 24, 2022 for Peak level Conc calc
@@ -14,13 +20,40 @@ Peak_FAD1     = [];
 Peak_FAD2     = [];
 for ii = 1:length(FRET_List)
     FRET_Item  = FRET_List(ii);
+
+
+    %added %241204_MS
+    Polygon_Item=handles.Polygon_List(ii); 
+    Segment_Item=handles.Segment_List(ii); 
+
     
-    FDA_L1 = []; FDA_L1(:,1) = FRET_Item.TEW_FDA_L1;
-    TEW_FDA_L1 = [TEW_FDA_L1; FDA_L1];
-    FAD_L1 = []; FAD_L1(:,1) = FRET_Item.TEW_FAD_L1;
+
+    FDA_L1 = []; FDA_L1(:,1) = FRET_Item.TEW_FDA_L1; 
+    TEW_FDA_L1 = [TEW_FDA_L1; FDA_L1]; 
+    FAD_L1 = []; FAD_L1(:,1) = FRET_Item.TEW_FAD_L1; 
     TEW_FAD_L1 = [TEW_FAD_L1; FAD_L1];
     FAD_L2 = []; FAD_L2(:,1) = FRET_Item.TEW_FAD_L2;
     TEW_FAD_L2 = [TEW_FAD_L2; FAD_L2];
+    
+    no_segments=size(FAD_L2,1);
+    Polygon_number=ones(no_segments,1)*ii;
+    TEW_Polygon_number = [TEW_Polygon_number; Polygon_number];
+
+    Polygon_frame=ones(no_segments,1)*Polygon_Item.Image_Frame_Index;
+    TEW_Polygon_frame = [TEW_Polygon_frame; Polygon_frame];
+
+    for jj=1:no_segments
+        mean_Coordinates=mean(Segment_Item.Polygons{1,jj},1);
+        TEW_Segment_coord=[TEW_Segment_coord; mean_Coordinates];
+    
+    end
+
+    Names = repmat(Polygon_Item.Name, no_segments, 1); % Repeat the name 11,000 times
+    Names = cellstr(Names);
+    TEW_PolygonNames=[TEW_PolygonNames; Names]; %
+    
+    %end of add %241204_MS
+
 
     Eapp2           = FRET_Item.Eapp;
     Eapp            = [Eapp; Eapp2];
@@ -55,7 +88,9 @@ if isfield(UM_Params, 'rowA'), rowA = UM_Params.rowA; else rowA = 0.056; end
 % Conc  = Dconc+Aconc;
 % xA    = Aconc./Conc;
 [TEW_Eapp, Dconc, Aconc, Conc, xA] = TwoWL_Conc_Eapp_Calc(TEW_FDA_L1, TEW_FAD_L1, TEW_FAD_L2, qD, qA, rowD, rowA, SlopD, SlopA, psfD, psfA);
-handles.TEW_Molecular_Info  = [Conc, xA, TEW_Eapp, TEW_FDA_L1, TEW_FAD_L1, TEW_FAD_L2, Eapp];
+%handles.TEW_Molecular_Info  = [Conc, xA, TEW_Eapp, TEW_FDA_L1, TEW_FAD_L1, TEW_FAD_L2, Eapp];
+handles.TEW_Molecular_Info  = [Conc, xA, TEW_Eapp, TEW_FDA_L1, TEW_FAD_L1, TEW_FAD_L2, Eapp,TEW_Polygon_number,TEW_Polygon_frame, TEW_Segment_coord]; %241204_MS
+handles.FOV_List  = TEW_PolygonNames; %241204_MS
 handles.TEW_Eapp_Conc_Info  = [Dconc, Aconc, Conc, xA, Eapp];
 
 [Peak_Eapp12, Peak_Dconc, Peak_Aconc, Peak_Conc, Peak_xA] = TwoWL_Conc_Eapp_Calc(Peak_FDA1, Peak_FAD1, Peak_FAD2, qD, qA, rowD, rowA, SlopD, SlopA, psfD, psfA);

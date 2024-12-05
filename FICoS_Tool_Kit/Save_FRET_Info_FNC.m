@@ -34,7 +34,9 @@ switch File_Type
             xlswrite([handles.Ana_Path '\' Name], handles.TEW_Eapp_Conc_Info, 'Eapp_Conc_Info', 'A2');
             xlswrite([handles.Ana_Path '\' Name], {'D/pixel','A/pixel','Prot/pixel', 'xA', 'Eapp'}, 'Eapp_Conc_Info', 'A1');
             xlswrite([handles.Ana_Path '\' Name], handles.TEW_Molecular_Info, 'TEW_Molecular_Info', 'A2');
-            xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', '<Eapp>', 'FDA-1', 'FAD-1', 'FAD-2', 'Eapp'}, 'TEW_Molecular_Info', 'A1');
+            xlswrite([handles.Ana_Path '\' Name], handles.FOV_List, 'TEW_Molecular_Info', 'M2'); %241204_MS
+            %xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', '<Eapp>', 'FDA-1', 'FAD-1', 'FAD-2', 'Eapp'}, 'TEW_Molecular_Info', 'A1');
+            xlswrite([handles.Ana_Path '\' Name], {'Concentration', 'xA', '<Eapp>', 'FDA-1', 'FAD-1', 'FAD-2', 'Eapp','', 'Polygon Number','Frame Number','SegmentCenter_X','SegmentCenter_Y','ROI_name'}, 'TEW_Molecular_Info', 'A1'); %241204_MS
             xlswrite([handles.Ana_Path '\' Name], handles.Peak_Eapp_Conc_Info, 'Peak_Eapp_Conc_Info', 'A2');
             xlswrite([handles.Ana_Path '\' Name], {'D/pixel','','A/pixel','','Prot/pixel','', 'xA','', 'Eapp'}, 'Peak_Eapp_Conc_Info', 'A1');
             xlswrite([handles.Ana_Path '\' Name], handles.Peak_Molecular_Info, 'Peak_Molecular_Info', 'A2');
