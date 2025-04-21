@@ -1,5 +1,5 @@
 Ana_Path, .\
-Hor_Shift, 0.0163
+Hor_Shift, 0.00
 Sample_Type, Cells
 Pen_Size, 1
 Separate_Dir, 0
