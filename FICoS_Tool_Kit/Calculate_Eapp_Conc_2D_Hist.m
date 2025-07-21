@@ -23,8 +23,8 @@ for ii = 1:length(FRET_List)
 
 
     %added %241204_MS
-    Polygon_Item=handles.Polygon_List(ii); 
-    Segment_Item=handles.Segment_List(ii); 
+    Polygon_Item=mwHandles.Polygon_List(ii); 
+    Segment_Item=mwHandles.Segment_List(ii); 
 
     
 
